@@ -8,11 +8,9 @@
 // @import "tags";
 // @import "author";
 // @import "post";
-html {
-  color: var(--main-text-color);
-}
 
 body {
+  color: var(--main-text-color);
   background-color: var(--main-background-color);
   display: flex;
   min-height: 100vh;
@@ -27,54 +25,22 @@ nav {
   background-color: var(--main-color);
 }
 
-// #theme-toggle {
-//   &.dark {
-//     background-color: #fff;
-//     mask: url(../img/icons/sun.svg)  no-repeat;
-//     -webkit-mask: url(../img/icons/sun.svg)  no-repeat;
-
-//     &:hover {
-//       background-color: #212121;
-//     }
-//   }
-
-//   &.light {
-//     background-color: #000;
-//     mask: url(../img/icons/moon.svg)  no-repeat;
-//     -webkit-mask: url(../img/icons/moon.svg)  no-repeat;
-//     &:hover {
-//       background-color: #9e9e9e;
-//     }
-//   }
-//   cursor: pointer;
-//   right: 30px;
-//   top: 75px;
-//   position: absolute;
-//   display: inline-block;
-//   width: 35px;
-//   height: 35px;
-//   -webkit-mask-size: contain;
-//   mask-size: contain;
-//   -webkit-mask-position: center;
-//   mask-position: center;
-// }
-
 main {
-  flex: 1 0 auto;
 }
 
-.adjust-index{
-  z-index:0 !important;
+.browser-default-uls {
+  ul {
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    li {
+      list-style-type: disc!important;
+      ul {
+        li {list-style-type: circle!important;}
+      }
+    }
+  }
 }
-
-p {
-  line-height: 2.0rem;
-  font-size: 1.25rem;
-  letter-spacing: 0.1rem;
-  font-weight: 300;
-}
-
-
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
