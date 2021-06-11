@@ -92,6 +92,7 @@ html[data-theme="dark"] {
     --ligther-main-color: #{$darkLighterMainColor};
     --main-text-color: #{$darkTextColor};
     --secondary-color: #{$darkSecondaryColor};
+    @include dark_highlight;
   }
 
   html[data-theme="light"] {
@@ -103,6 +104,7 @@ html[data-theme="dark"] {
     --ligther-main-color: #{$lighterMainColor};
     --main-text-color: #{$textColor};
     --secondary-color: #{$secondaryColor};
+    @include light_highlight;
   }
 }
 
