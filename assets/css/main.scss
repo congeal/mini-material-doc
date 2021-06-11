@@ -12,8 +12,22 @@ body {
   flex-direction: column;
 }
 
-nav {
+.main-nav {
   background-color: var(--main-color);
+}
+
+.sidenav {
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
+  .divider {
+    background-color: rgba(255,255,255,0.2);
+  }
+  li a {
+    color: var(--main-text-color);
+  }
+  li:hover {
+    background-color:var(--lighter-main-color);
+  }
 }
 
 .browser-default-uls {
