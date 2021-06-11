@@ -3,6 +3,7 @@
 
 @import "variables";
 @import "monokai";
+@import "typography";
 
 body {
   color: var(--main-text-color);
@@ -20,13 +21,13 @@ body {
   color: var(--main-text-color);
   background-color: var(--main-background-color);
   .divider {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
   }
   li a {
     color: var(--main-text-color);
   }
   li:hover {
-    background-color:var(--lighter-main-color);
+    background-color: var(--lighter-main-color);
   }
 }
 
@@ -36,15 +37,18 @@ body {
     margin-top: 10px;
     margin-bottom: 15px;
     li {
-      list-style-type: disc!important;
+      list-style-type: disc !important;
       ul {
-        li {list-style-type: circle!important;}
+        li {
+          list-style-type: circle !important;
+        }
       }
     }
   }
 }
 
-html, html[data-theme="light"] {
+html,
+html[data-theme="light"] {
   --text-color: #{$textColor};
   --main-color: #{$mainColor};
   --card-color: #{$cardColor};
@@ -67,7 +71,8 @@ html[data-theme="dark"] {
 }
 
 @media (prefers-color-scheme: dark) {
-  html, html[data-theme="dark"] {
+  html,
+  html[data-theme="dark"] {
     --text-color: #{$darkTextColor};
     --main-color: #{$darkMainColor};
     --card-color: #{$darkCardColor};
