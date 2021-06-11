@@ -23,7 +23,7 @@ I want this to be long.
 
 ##### Code highlight
 ```verilog
-module #(
+module register #(
     parameter W_DATA = 4;
 )
 (   input clk, resetn,
