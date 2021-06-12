@@ -15,9 +15,7 @@
 
 <ul id="slide-out" class="sidenav">
     <li class="logo">
-        <!-- <div class="logo"> -->
-            <div class="center"><a href="{{site.baseurl}}/"><img src="https://octodex.github.com/images/nyantocat.gif" class="responsive-img"></a></div>
-        <!-- </div> -->
+        <div class="center"><a href="{{site.baseurl}}/"><img src="https://octodex.github.com/images/nyantocat.gif" class="responsive-img"></a></div>
     </li>
     <li {% if page.url == "/" %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{base.url}}/index.html">Home</a></li>
     {% for collection in site.collections %}

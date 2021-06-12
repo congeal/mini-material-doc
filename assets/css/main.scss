@@ -38,6 +38,12 @@ body {
   li:hover {
     background-color: var(--lighter-main-color);
   }
+  li.active {
+    background-color: var(--main-color);
+  }
+  .subheader {
+    margin-left: -1em;
+  }
 }
 
 .browser-default-uls {
