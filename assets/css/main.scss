@@ -30,7 +30,7 @@ body {
   color: var(--main-text-color);
   background-color: var(--main-background-color);
   .divider {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--light-main-color);
   }
   li a {
     color: var(--main-text-color);

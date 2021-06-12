@@ -14,20 +14,19 @@
 </div>
 
 <ul id="slide-out" class="sidenav">
-    <li>
-        <div class="user-view">
-            <div class="background">
-            </div>
-            <!-- <a href="#user"><img class="circle" src="images/yuna.jpg"></a> -->
-            <a href="#name"><span class="ame">John Doe</span></a>
-            <a href="#email"><span class="mail">jdandturk@gmail.com</span></a>
-        </div>
+    <li class="logo">
+        <!-- <div class="logo"> -->
+            <div class="center"><a href="{{site.baseurl}}/"><img src="https://octodex.github.com/images/nyantocat.gif" class="responsive-img"></a></div>
+        <!-- </div> -->
     </li>
-    <li class="active"><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li>
-        <div class="divider"></div>
-    </li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <li {% if page.url == "/" %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{base.url}}/index.html">Home</a></li>
+    {% for collection in site.collections %}
+    {% if collection.docs.size > 0 %}
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">{{collection.label}}</a></li>
+        {% for doc in collection.docs %}
+        <li {% if doc.url == page.url %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{doc.url}}">{{doc.title}}</a></li>
+        {% endfor %}
+    {% endif %}
+    {% endfor %}
 </ul>

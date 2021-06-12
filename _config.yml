@@ -9,3 +9,10 @@ kramdown:
     css_class: 'highlight'
     block:
       line_numbers: true
+
+collections:
+  docs:
+    output: true
+    order:
+      - index.md
+      - actions.md
