@@ -2,10 +2,10 @@
 $(document).ready(function () {
     //Side navigation
     $('.sidenav').sidenav();
-    $('.sidenav a').click(function (e) {
+    $('.delayed-link a').click(function (e) {
         e.preventDefault();
         var linkUrl = $(this).attr('href');
-        setTimeout(function (url) { window.location = url; }, 300, linkUrl);
+        setTimeout(function (url) { window.location = url; }, 400, linkUrl);
     });
 
     //TOC
