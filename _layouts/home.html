@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="section" id="index-banner">
+  <br><br>
+  <h1 class="header center secondary-text-color">{{site.title}}</h1>
+  <div class="row center">
+    <h4 class="header col s12 light">{{page.description}}</h5>
+  </div>
+  <br><br>
+  <div class="row center">
+    <a href="{{baseurl}}/{{page.start.link}}" class="btn-large waves-effect waves-light">{{page.start.text}}</a>
+  </div>
+  <br><br>
+</div>
+<div class="section" id="promotion">
+  <!--   Icon Section   -->
+  <div class="row">
+    {% for promo in page.promos %}
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h2 class="center light-blue-text"><i class="material-icons">{{promo.icon}}</i></h2>
+        <h4 class="center">{{promo.caption}}</h5>
+          <p class="light">{{promo.content}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

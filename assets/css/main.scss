@@ -6,6 +6,21 @@
 @import "colorful";
 @import "typography";
 
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: 4rem;
+}
+
+.primary-text-color {
+  color: var(--main-color)
+}
+
+.secondary-text-color {
+  color: var(--secondary-color)
+}
+
 .highlight {
   background-color: var(--card-color);
   table tr {
