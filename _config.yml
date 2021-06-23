@@ -1,5 +1,6 @@
 title: MyBlog
 icon: book
+baseurl: /mini_material_doc
 
 markdown: kramdown
 highlighter: rouge
