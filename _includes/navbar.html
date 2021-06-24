@@ -4,7 +4,7 @@
             <ul class="left">
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
             </ul>
-            <a href="{{baseurl}}/" class="brand-logo center"><i class="material-icons">{{site.icon}}</i>{{ site.title }}</a>
+            <a href="{{site.baseurl}}/" class="brand-logo center"><i class="material-icons">{{site.icon}}</i>{{ site.title }}</a>
             <ul class="right">
                 <li><a href="#" id="theme-toggle" class="waves-effect waves-light" onclick="modeSwitcher()"><i
                             class="material-icons">invert_colors</i></a></li>
@@ -16,16 +16,16 @@
 <ul id="slide-out" class="sidenav delayed-link">
     <li class="logo">
         <div class="center"><a href="{{site.baseurl}}/">
-            <img src="{{base.url}}/assets/img/logo.svg" class="logo_img">
+            <img src="{{site.baseurl}}/assets/img/logo.svg" class="logo_img">
         </a></div>
     </li>
-    <li {% if page.url == "/" %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{base.url}}/index.html">Home</a></li>
+    <li {% if page.url == "/" %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{site.baseurl}}/index.html">Home</a></li>
     {% for collection in site.collections %}
     {% if collection.docs.size > 0 %}
     <li><div class="divider"></div></li>
     <li><a class="subheader">{{collection.label}}</a></li>
         {% for doc in collection.docs %}
-        <li {% if doc.url == page.url %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{doc.url}}">{{doc.title}}</a></li>
+        <li {% if doc.url == page.url %}class="active"{% endif %}><a class="waves-effect sidenav-trigger" href="{{doc.url | prepend: site.baseurl }}">{{doc.title}}</a></li>
         {% endfor %}
     {% endif %}
     {% endfor %}

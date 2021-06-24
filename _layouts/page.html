@@ -12,9 +12,9 @@ layout: default
 </div>
 <div id="page-link" class="row flow-text delayed-link">
     <div class="col s6 left-align">
-        {% if page.previous %}<a class="waves-effect" href="{{page.previous.url}}"><i class="material-icons">arrow_back_ios_new</i> {{page.previous.title}}</a>{% endif %}
+        {% if page.previous %}<a class="waves-effect" href="{{page.previous.url | prepend: site.baseurl }}"><i class="material-icons">arrow_back_ios_new</i> {{page.previous.title}}</a>{% endif %}
     </div>
     <div class="col s6 right-align">
-        {% if page.next %}<a class="waves-effect" href="{{page.next.url}}">{{page.next.title}} <i class="material-icons">arrow_forward_ios</i></a>{% endif %}
+        {% if page.next %}<a class="waves-effect" href="{{page.next.url | prepend: site.baseurl }}">{{page.next.title}} <i class="material-icons">arrow_forward_ios</i></a>{% endif %}
     </div>
 </div>
