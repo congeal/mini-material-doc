@@ -18,4 +18,6 @@ $(document).ready(function () {
         $('.scrollspy').scrollSpy();
         $('.row .table-of-contents').pushpin({ top: $('.row').offset().top, offset: 75 });
     }
+
+    $('.materialboxed').materialbox();
 });

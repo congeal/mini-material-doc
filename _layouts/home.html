@@ -14,14 +14,19 @@ layout: default
   <br><br>
 </div>
 <div class="section" id="promotion">
-  <!--   Icon Section   -->
   <div class="row">
     {% for promo in page.promos %}
-    <div class="col s12 m4">
-      <div class="icon-block">
-        <h2 class="center light-blue-text"><i class="material-icons">{{promo.icon}}</i></h2>
-        <h4 class="center">{{promo.caption}}</h5>
-          <p class="light">{{promo.content}}</p>
+    <div class="col s12 m4 center icon-block">
+      <div class="light-blue-text">
+        {% assign mdi_prefix = promo.icon | split: '-' %}
+        {% if mdi_prefix[0] == 'mdi' %}
+        <i class="material-icons mdi {{promo.icon}}"></i>
+        {% else %}
+        <i class="material-icons">{{promo.icon}}</i>
+        {% endif %}
+      </div>
+      <h4 class="promo-caption"><a href="{{promo.link}}">{{promo.caption}}</a></h4>
+      <p class="flow-text">{{promo.content}}</p>
       </div>
     </div>
     {% endfor %}
