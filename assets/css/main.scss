@@ -10,11 +10,18 @@
   vertical-align: middle;
 }
 
-.icon-block {
-  padding: 0 15px;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
-.icon-block .material-icons {
+.row.grid .cell {
+  margin-left:0 ;
+}
+
+#promotion .material-icons {
 	font-size: 4rem;
+  color: var(--main-color);
 }
 
 .primary-text-color {
@@ -30,6 +37,14 @@
   table tr {
     border-bottom: hidden;
   }
+  .rouge-gutter {
+    background-color: var(--secondary-backgroundcolor);
+  }
+}
+
+.promo-caption {
+  font-weight: 500;
+  margin-top: 5px;
 }
 
 body {
@@ -38,6 +53,21 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+input {
+  color: var(--primary-text-color);
+}
+
+img.center-img {
+  max-width: 50%;
+  margin: 0 auto;
+  display: block;
+  padding: 1rem;
+}
+
+img.responsive-img {
+  padding: 1rem;
 }
 
 .main-nav {
@@ -93,6 +123,7 @@ html[data-theme="light"] {
   --main-color: #{$mainColor};
   --card-color: #{$cardColor};
   --main-background-color: #{$background};
+  --secondary-background-color: #{$secondaryBackground};
   --light-main-color: #{$lightMainColor};
   --ligther-main-color: #{$lighterMainColor};
   --main-text-color: #{$textColor};
@@ -105,6 +136,7 @@ html[data-theme="dark"] {
   --main-color: #{$darkMainColor};
   --card-color: #{$darkCardColor};
   --main-background-color: #{$darkBackground};
+  --secondary-background-color: #{$darkSecondaryBackground};
   --light-main-color: #{$darkLightMainColor};
   --ligther-main-color: #{$darkLighterMainColor};
   --main-text-color: #{$darkTextColor};
@@ -119,6 +151,7 @@ html[data-theme="dark"] {
     --main-color: #{$darkMainColor};
     --card-color: #{$darkCardColor};
     --main-background-color: #{$darkBackground};
+    --secondary-background-color: #{$darkSecondaryBackground};
     --light-main-color: #{$darkLightMainColor};
     --ligther-main-color: #{$darkLighterMainColor};
     --main-text-color: #{$darkTextColor};
@@ -131,6 +164,7 @@ html[data-theme="dark"] {
     --main-color: #{$mainColor};
     --card-color: #{$cardColor};
     --main-background-color: #{$background};
+    --secondary-background-color: #{$secondaryBackground};
     --light-main-color: #{$lightMainColor};
     --ligther-main-color: #{$lighterMainColor};
     --main-text-color: #{$textColor};
