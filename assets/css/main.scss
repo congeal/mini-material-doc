@@ -10,12 +10,18 @@
   vertical-align: middle;
 }
 
-.icon-block {
-  padding: 0 15px;
-  width: 100%;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
-.icon-block .material-icons {
+.row.grid .cell {
+  margin-left:0 ;
+}
+
+#promotion .material-icons {
 	font-size: 4rem;
+  color: var(--main-color);
 }
 
 .primary-text-color {
