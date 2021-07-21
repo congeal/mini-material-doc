@@ -2,5 +2,8 @@
 
 <script src="{{ "/assets/js/init.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/mode-switcher.js" | prepend: site.baseurl }}"></script>
+{% if page.asciinema %}
+<script src="{{"/assets/js/asciinema-player.js" | relative_url}}"></script>
+{% endif %}
 </body>
 </html>
